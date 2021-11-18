@@ -1,5 +1,5 @@
 {
-  "name": "node-trigger-download-file-pro",
+  "name": "trigger-download-file-pro",
   "private": true,
   "scripts": {
     "dev": "next dev",
