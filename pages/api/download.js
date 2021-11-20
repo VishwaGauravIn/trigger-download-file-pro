@@ -8,7 +8,7 @@ const pipeline = promisify(stream.pipeline);
 
 const handler = async (req, res) => {
   const url = req.query.url;
-  const filename= 'attachment; filename='+req.query.filename+'.'+req.query.format;
+  const filename= 'attachment; filename='+encodeURIComponent(req.query.filename)+'.'+req.query.format;
   const response = await fetch(url); // replace this with your API call & options
   if (!response.ok) throw new Error(`unexpected response ${response.statusText}`);
 
